@@ -5,6 +5,6 @@
 class Square:
     '''Class with an attribute'''
     def __init__(self, size):
-        self.__size = None
+        self.__size = size
         '''Size attribute is defined'''
     pass
