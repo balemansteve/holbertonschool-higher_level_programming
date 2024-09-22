@@ -11,6 +11,7 @@ class Square:
             raise ValueError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+
     def area(self):
         '''Area method is defined'''
         return self.__size * self.__size
