@@ -15,9 +15,9 @@ class simpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b'{"name": "John", "age": 30, "city": "New York"}')
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/html")
             self.end_headers()
-            self.wfile.write(b'{"status": "OK"}')
+            self.wfile.write(b"OK")
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/html")
