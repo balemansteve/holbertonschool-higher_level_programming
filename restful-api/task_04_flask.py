@@ -35,10 +35,10 @@ def add_user():
         return jsonify({
             "error": "Username is required"
             }), 400
-    username = username.lower()
     if username in users:
         return jsonify({
-            "error": "User already exists"
+            "error": "User already exists",
+            "user": users[username]
             }), 409
     users[username] = {
         "username": username,
