@@ -32,9 +32,7 @@ def add_user():
     data = request.get_json()
     username = data.get('username')
     if username in users:
-        return jsonify({
-            "error": "User already exists"
-            }), 409
+        return '', 409
     if not username:
         return jsonify({
             "error": "Username is required"
