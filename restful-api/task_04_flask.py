@@ -38,7 +38,7 @@ def add_user():
             "error": "Username is required"
             }), 400
     users[username] = {
-        "username": username,
+        "username": username.lower(),
         "name": data.get('name'),
         "age": data.get('age'),
         "city": data.get('city')
