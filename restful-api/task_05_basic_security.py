@@ -4,7 +4,7 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.config['JWT_SECRET_KEY'] = 'your_secret_key'
+app.config['JWT_SECRET_KEY'] = 'secret_key_HolbertonC24!'
 
 auth = HTTPBasicAuth()
 jwt = JWTManager(app)
@@ -15,7 +15,11 @@ users = {}
 def verify_password(username, password):
     if username in users and check_password_hash(users[username]['password'], password):
         return username
-    
+
+@auth.error_handler
+def unauthorized():
+    return jsonify({"error": "Unauthorized access"}), 401
+
 @app.route('/basic-protected', methods=['GET'])
 @auth.login_required
 def basic_protected():
