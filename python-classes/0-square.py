@@ -2,6 +2,7 @@
 """
 Empty class Square
 """
+
 class Square:
     """
     Empty class
