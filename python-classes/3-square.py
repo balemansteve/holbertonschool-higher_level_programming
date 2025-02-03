@@ -6,7 +6,7 @@ This module defines the Square class
 
 class Square:
     """
-    Represents a Square class witn a private attribute
+    Represents a Square class with a private attribute
     and area method implementation
     """
     def __init__(self, size=0):
