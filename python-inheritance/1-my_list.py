@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a list class 
+This module defines a list class
 """
 
 
