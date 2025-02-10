@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Function to check if is an subclass
-
 """
 
 
