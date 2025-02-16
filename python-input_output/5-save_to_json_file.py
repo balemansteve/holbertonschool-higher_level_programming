@@ -5,6 +5,7 @@ it save the Python structure to JSON file
 """
 import json
 
+
 def save_to_json_file(my_obj, filename, encoding='utf-8'):
     """
     Saves the Python structure to JSON file
