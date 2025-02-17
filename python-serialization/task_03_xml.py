@@ -32,4 +32,4 @@ def deserialize_from_xml(filename):
         dictionary = {child.tag: child.text for child in root}
         return dictionary
     except ET.ParseError:
-        return False
+        return None
