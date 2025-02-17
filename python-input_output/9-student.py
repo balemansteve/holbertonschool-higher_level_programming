@@ -29,7 +29,7 @@ class Student:
         Args:
             attrs (list, optional):
                 A list of attributes names include
-                If None, all attributes are included 
+                If None, all attributes are included
         Returns:
             dict: A dictionary containing the specified attributes or
             all attributes
