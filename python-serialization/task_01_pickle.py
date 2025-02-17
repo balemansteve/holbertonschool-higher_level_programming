@@ -53,7 +53,7 @@ class CustomObject:
         Args:
             filename (str): The name of the file to load the object from
         Returns:
-            CustomObject: The deserialized object, or None if it fails 
+            CustomObject: The deserialized object, or None if it fails
         """
         try:
             with open(filename, 'rb') as f:
