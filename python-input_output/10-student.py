@@ -30,7 +30,7 @@ class Student:
             attrs (list, optional): List of attributes to include
                                     If None, all attributes are included
         Returns:
-            dict: Dictionary with specified attributes or all attributes 
+            dict: Dictionary with specified attributes or all attributes
         """
         if attrs is None:
             return self.__dict__
