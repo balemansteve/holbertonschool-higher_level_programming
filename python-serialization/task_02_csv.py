@@ -28,3 +28,4 @@ def convert_csv_to_json(csv_filename):
         Print an error message if conversion fails
         """
         print(f"An error occurred: {e}")
+        return False
