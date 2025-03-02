@@ -3,7 +3,6 @@ This script creates a Flask API with authentication mechanisms using Basic Auth 
 It provides endpoints for protected access, user authentication, and role-based authorization.
 """
 
-
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
@@ -97,7 +96,7 @@ def admin_only():
     current_user = get_jwt_identity()
     if current_user["role"] != "admin":
         return jsonify(error="Admin access required"), 403
-    return jsonify(message="Admin Access: Granted") 
+    return jsonify(message="Admin Access: Granted")
 
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
