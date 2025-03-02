@@ -27,7 +27,7 @@ def verify_password(username, password):
     Return:
         str or None: Returns the username if authentication is successful, otherwise None
     """
-    if username in users and check_password_hash(users[username], password):
+    if username in users and check_password_hash(users[username]['password'], password):
         return username
 
 @auth.error_handler
@@ -66,7 +66,7 @@ def login():
     data = request.get_json()
     username = data.get('username')
     password = data.get('password')
-    if check_password_hash(users[username]['password'], password):
+    if username in users and check_password_hash(users[username]['password'], password):
         access_token = create_access_token(identity={"username": username, "role": users[username]["role"]})
         return jsonify(access_token=access_token)
     return jsonify({"msg": "Invalid credentials"}), 401
@@ -150,9 +150,9 @@ def handle_needs_fresh_token_error(err):
     Args:
         err (str): The error message
     Return:
-        Response: JSON object with an error message and status code
+        Response: JSON object with an error message and status
     """
     return jsonify({"error": "Fresh token required"}), 401
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run()
