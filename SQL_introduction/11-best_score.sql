@@ -1,5 +1,6 @@
--- List records from the table sorted by score in descending order
+-- List records with a score greater than or equal to 10, sorted in descending order
 
 SELECT score, name
 FROM second_table
-ORDER BY score DESC;
+WHERE score >= 10
+ORDER BY score DESC; 
