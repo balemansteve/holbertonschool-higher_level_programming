@@ -1,6 +1,5 @@
--- Count the number of records per score and sort them in descending order
+-- List all records, sorted by score in descending order
 
-SELECT score, COUNT(*) AS number
+SELECT score, name
 FROM second_table
-GROUP BY score
-ORDER BY DESC;
+ORDER BY score DESC;
