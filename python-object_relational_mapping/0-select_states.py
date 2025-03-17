@@ -14,7 +14,7 @@ def states(username, userPassword, database_name):
     """
 
     # Connect to the MySQL database
-    db = mysql.connect(host="localhost", port=3306,
+    db = mysql.connector.connect(host="localhost", port=3306,
                          user=username, passwd=userPassword,
                          db=database_name)
 
