@@ -1,4 +1,4 @@
--- Delete records with a score less than or equal to 5
+-- Compute the average score from the table
 
-DELETE FROM second_table
-WHERE score <= 5;
+SELECT AVG(score) AS average
+FROM second_table;
