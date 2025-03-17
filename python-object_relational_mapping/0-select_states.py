@@ -4,7 +4,7 @@ Write a script that lists all states from the database hbtn_0e_0_usa
 The script connects to a MySQL database and fetches all records from the 'states' table
 """
 
-import MySQLdb
+import mysql.connector
 import sys
 
 def states(username, userPassword, database_name):
@@ -14,7 +14,7 @@ def states(username, userPassword, database_name):
     """
 
     # Connect to the MySQL database
-    db = MySQLdb.connect(host="localhost", port=3306,
+    db = mysql.connect(host="localhost", port=3306,
                          user=username, passwd=userPassword,
                          db=database_name)
 
