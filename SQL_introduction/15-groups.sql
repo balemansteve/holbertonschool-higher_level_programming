@@ -1,4 +1,6 @@
--- Compute the average score from the table
+-- Count the number of records per score and sort them in descending order
 
-SELECT AVG(score) AS average
-FROM second_table;
+SELECT score, COUNT(*)
+FROM second_table
+GROUP BY score
+ORDER BY number DESC;
