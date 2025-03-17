@@ -1,8 +1,5 @@
--- Insert multiple records into the table
+-- List records from the table sorted by score in descending order
 
-INSERT INTO second_table (id, name, score)
-VALUES
-    (1, John, 10),
-    (2, Alex, 3),
-    (3, Bob, 14),
-    (4, George, 8);
+SELECT score, name
+FROM second_table
+ORDER BY score DESC;
